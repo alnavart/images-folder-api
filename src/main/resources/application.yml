@@ -1,1 +1,7 @@
-spring.resources.staticLocations=.
+folder: &config
+  path: .
+  port: 8080
+  extensions: jpg,png
+
+spring.resources.staticLocations: ${config.path}
+server.port: ${confg.port}

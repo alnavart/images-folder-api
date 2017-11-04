@@ -1,13 +1,20 @@
 package org.alnavart.imagesfolderapi
 
+import groovy.transform.EqualsAndHashCode
+import groovy.transform.ToString
+
+@ToString
+@EqualsAndHashCode
 class Image {
-    String id
-    String name
+    String fileName
     String url
 
-    Image(String id, String name, String url) {
-        this.id = id
-        this.name = name
+    Image(String fileName, String url) {
+        this.fileName = fileName
         this.url = url
+    }
+
+    String getName() {
+        fileName.take(fileName.lastIndexOf('.'))
     }
 }

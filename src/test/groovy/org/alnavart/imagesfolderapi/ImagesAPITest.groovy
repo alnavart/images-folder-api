@@ -23,11 +23,9 @@ class ImagesAPITest {
         this.mvc.perform(get("/images/")
                 .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath('$[0].id', equalTo('1')))
-                .andExpect(jsonPath('$[0].name', equalTo('Pedro')))
+                .andExpect(jsonPath('$[0].fileName', equalTo('Pedro')))
                 .andExpect(jsonPath('$[0].url', equalTo('url')))
-                .andExpect(jsonPath('$[1].id', equalTo('2')))
-                .andExpect(jsonPath('$[1].name', equalTo('Paco')))
+                .andExpect(jsonPath('$[1].fileName', equalTo('Paco')))
                 .andExpect(jsonPath('$[1].url', equalTo('url2')))
     }
 }

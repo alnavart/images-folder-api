@@ -9,7 +9,7 @@ class ImagesAPI {
 
     @RequestMapping("/")
     List<Image> greeting() {
-        return [new Image('1', 'Pedro', 'url'),
-                new Image("2", "Paco", "url2")]
+        return [new Image('Pedro', 'url'),
+                new Image('Paco', 'url2')]
     }
 }
