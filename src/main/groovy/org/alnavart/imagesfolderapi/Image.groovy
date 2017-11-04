@@ -7,14 +7,18 @@ import groovy.transform.ToString
 @EqualsAndHashCode
 class Image {
     String fileName
-    String url
+    String path
 
-    Image(String fileName, String url) {
+    Image(String fileName, String path) {
         this.fileName = fileName
-        this.url = url
+        this.path = path
     }
 
     String getName() {
         fileName.take(fileName.lastIndexOf('.'))
+    }
+
+    String getExtension() {
+        fileName.split("\\.")[1]
     }
 }

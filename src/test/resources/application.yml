@@ -1,7 +1,5 @@
 folder: &config
   path: test-images
-  port: 8080
   extensions: jpg,png
 
-spring.resources.staticLocations: ${config.path}
-server.port: ${confg.port}
+spring.resources.staticLocations: file:test-images
